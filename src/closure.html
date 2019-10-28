@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button>11</button><br>
+	<button>11</button><br>
+	<button>11</button><br>
+	<button>11</button><br>
+	<button>11</button>
+</body>
+<script type="text/javascript">
+//	function dog(argument) {
+//		let name = '小狗';
+//		return function (argument) {
+//			return name;
+//		}
+//	}
+//	let smallDog = dog();
+//	console.log(smallDog());
+	
+	
+	
+	
+	
+//	// 实际中的应用，n个button点击的时候显示当前index
+//	const allBtn = document.querySelectorAll('button');
+//	for (var i = 0; i < allBtn.length; i++) {
+//		const btn = allBtn[i];
+//		btn.addEventListener('click', (function (index) {
+//			return function () {
+//				console.log(index);
+//			}
+//		})(i))
+//	}
+
+
+
+//	 function a(x,y) {
+//         var st2 = b(x+y); // 30
+//         return function() {
+//             st2 = st2();
+//             alert(st2); // 34
+//	     }
+//	 }
+//	 function b(a) {
+//         alert(a++); // 30
+//         alert(a++);	// 31
+//         return function() {
+//             alert(a++); // 32
+//             alert(a++); // 33
+//             return a; //
+//         }
+//	 }
+//	 var st = a(10,20);
+//	 st();
+
+
+
+
+	 // 要到创建这个函数的那个作用域中取值
+	 var max = 10,
+	 	fn = function (x) {
+	 		if (x > max) {
+	 			console.log(x);
+	 		}
+	 	};
+	 (function (f) {
+	 	var max = 100;
+	 	f(15)
+	 })(fn);
+
+
+	// var func = function (argument) {
+	// 	// body...
+	// 	alert('diaoying out');
+	// }
+	// var foo = function (argument) {
+	// 	// body...
+	// 	func();
+	// 	var func = function (argument) {
+	// 		// body...
+	// 		alert('inner');
+	// 	}
+	// 	func();
+	// }
+	// foo();
+
+
+	// function func(argument) {
+	// 	// body...
+	// 	var a = 1;
+	// 	return function (argument) {
+	// 		a = a + 1;
+	// 		console.log(a);
+	// 	}
+	// }
+
+	// var closure = func();
+	// var closure1 = func();
+	// closure();
+	// closure1();
+	// closure();
+
+
+
+	
+
+</script>
+</html>
